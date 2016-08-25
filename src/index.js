@@ -23,5 +23,5 @@ app.get('/hexToRgb', function(req, res) {
 
 
 app.listen(port, ()=> {
-  console.info(`Deadly Simple node project listening on port ${port}`); // eslint-disable-line no-console
+  console.info(`RGB node project listening on port ${port}`); // eslint-disable-line no-console
 });
