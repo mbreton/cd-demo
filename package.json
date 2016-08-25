@@ -1,0 +1,26 @@
+{
+  "name": "cd-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec *.spec.js",
+    "acceptance-test": "nightwatch -c nightwatch.json",
+    "acceptance-test-pp": "nightwatch -c nightwatch.json --env pp",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chromedriver": "^2.23.1",
+    "mocha": "^3.0.2",
+    "nightwatch": "^0.9.8",
+    "selenium-server-standalone-jar": "^2.53.1",
+    "sinon": "^1.17.5"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0"
+  }
+}
