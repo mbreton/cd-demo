@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec *.spec.js",
+    "pretest": "npm run lint",
+    "test": "./node_modules/.bin/mocha --reporter spec src/*.spec.js",
     "acceptance-test": "nightwatch -c nightwatch.json",
     "acceptance-test-pp": "nightwatch -c nightwatch.json --env pp",
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "lint": "eslint src/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,7 @@
     "chromedriver": "^2.23.1",
     "mocha": "^3.0.2",
     "nightwatch": "^0.9.8",
-    "selenium-server-standalone-jar": "^2.53.1",
+    "selenium-server-standalone-jar": "^2.53.1"
   },
   "dependencies": {
     "express": "^4.14.0"

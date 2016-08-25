@@ -15,5 +15,5 @@ exports.rgbToHex = function(red, green, blue) {
 };
 
 function pad(hex) {
-  return (hex.length === 1 ? "0" + hex : hex);
+  return (hex.length === 1 ? '0' + hex : hex);
 }
