@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
-    "test": "./node_modules/.bin/mocha --reporter spec src/*.spec.js",
-    "acceptance-test": "nightwatch -c nightwatch.json",
-    "acceptance-test-pp": "nightwatch -c nightwatch.json --env pp",
+    "unit-test": "./node_modules/.bin/mocha --reporter spec src/*.spec.js",
+    "acceptance-test": "npm start & nightwatch -c nightwatch.json",
+    "test": "npm run unit-test && npm run acceptance-test",
     "start": "node src/index.js",
     "lint": "eslint src/*.js"
   },
@@ -15,10 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
-    "chromedriver": "^2.23.1",
     "eslint": "^3.3.1",
     "mocha": "^3.0.2",
     "nightwatch": "^0.9.8",
+    "phantomjs-prebuilt": "^2.1.12",
     "selenium-server-standalone-jar": "^2.53.1"
   },
   "dependencies": {

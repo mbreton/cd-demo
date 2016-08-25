@@ -24,17 +24,11 @@
         "path" : ""
       },
       "desiredCapabilities": {
-        "browserName": "chrome",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
-      }
-    },
-    "pp" : {
-      "launch_url" : "http://google.fr",
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "browserName": "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "./node_modules/.bin/phantomjs",
+        "phantomjs.cli.args" : []
       }
     }
   }
